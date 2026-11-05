@@ -1,0 +1,4 @@
+class: AuthResult
+fields:
+  authToken: String
+  profile: UserProfile

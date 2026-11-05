@@ -1,0 +1,13 @@
+class: LoginSession
+table: login_session
+fields:
+  userId: String
+  tokenHash: String
+  expiresAt: DateTime
+  createdAt: DateTime
+indexes:
+  login_session_token_unique_idx:
+    fields: tokenHash
+    unique: true
+  login_session_user_idx:
+    fields: userId

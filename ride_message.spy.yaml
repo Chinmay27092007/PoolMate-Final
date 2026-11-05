@@ -1,0 +1,11 @@
+class: RideMessage
+table: ride_message
+fields:
+  rideId: int
+  senderId: String
+  senderName: String
+  text: String
+  sentAt: DateTime
+indexes:
+  ride_message_ride_sent_idx:
+    fields: rideId, sentAt

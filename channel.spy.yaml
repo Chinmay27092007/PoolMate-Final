@@ -1,0 +1,6 @@
+class: Channel
+table: channel
+fields:
+  campusId: int
+  name: String
+  description: String

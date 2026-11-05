@@ -1,0 +1,9 @@
+class: Campus
+table: campus
+fields:
+  name: String
+  emailDomain: String
+indexes:
+  campus_email_domain_unique_idx:
+    fields: emailDomain
+    unique: true

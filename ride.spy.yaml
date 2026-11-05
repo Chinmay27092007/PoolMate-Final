@@ -1,0 +1,26 @@
+class: Ride
+table: ride
+fields:
+  campusId: int
+  creatorId: String
+  creatorName: String
+  type: String
+  origin: String
+  destination: String
+  departAt: DateTime
+  seatsTotal: int
+  seatsTaken: int
+  totalFare: double?
+  womenOnly: bool
+  status: String
+  shareToken: String
+  shareExpiresAt: DateTime
+  createdAt: DateTime
+indexes:
+  ride_search_idx:
+    fields: campusId, origin, destination, departAt
+  ride_creator_idx:
+    fields: creatorId, status
+  ride_share_token_unique_idx:
+    fields: shareToken
+    unique: true

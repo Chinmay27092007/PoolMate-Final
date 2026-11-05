@@ -1,0 +1,24 @@
+class: UserProfile
+table: user_profile
+fields:
+  userId: String
+  campusId: int
+  name: String
+  email: String
+  branch: String
+  year: int
+  # Set once at registration (female / male / other). Not editable afterwards,
+  # because women-only rides rely on it. Changes go through an admin.
+  gender: String
+  bio: String?
+  skills: List<String>
+  interests: List<String>
+  lookingFor: List<String>
+  createdAt: DateTime
+indexes:
+  user_profile_user_id_idx:
+    fields: userId
+    unique: true
+  user_profile_email_unique_idx:
+    fields: email
+    unique: true

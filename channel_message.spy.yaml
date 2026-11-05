@@ -1,0 +1,11 @@
+class: ChannelMessage
+table: channel_message
+fields:
+  channelId: int
+  senderId: String
+  senderName: String
+  text: String
+  sentAt: DateTime
+indexes:
+  channel_message_channel_sent_idx:
+    fields: channelId, sentAt

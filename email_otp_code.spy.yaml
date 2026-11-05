@@ -1,0 +1,11 @@
+class: EmailOtpCode
+table: email_otp_code
+fields:
+  email: String
+  codeHash: String
+  attempts: int
+  expiresAt: DateTime
+  createdAt: DateTime
+indexes:
+  email_otp_email_idx:
+    fields: email, createdAt

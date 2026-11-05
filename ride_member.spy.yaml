@@ -1,0 +1,21 @@
+class: RideMember
+table: ride_member
+fields:
+  rideId: int
+  userId: String
+  userName: String
+  userGender: String
+  role: String
+  # 0 = organiser. The unique (rideId, seatNo) index is what makes
+  # overbooking impossible even when two people join at the same instant.
+  seatNo: int
+  joinedAt: DateTime
+indexes:
+  ride_member_ride_user_unique_idx:
+    fields: rideId, userId
+    unique: true
+  ride_member_ride_seat_unique_idx:
+    fields: rideId, seatNo
+    unique: true
+  ride_member_user_idx:
+    fields: userId

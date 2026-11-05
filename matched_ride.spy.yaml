@@ -1,0 +1,9 @@
+class: MatchedRide
+fields:
+  ride: Ride
+  score: int
+  whyMatched: List<String>
+  # What you would pay per head if you joined right now.
+  farePerHead: double?
+  # What each person pays once every seat is taken (the lowest it can get).
+  projectedFarePerHead: double?

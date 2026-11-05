@@ -1,0 +1,10 @@
+class: PublicTripSummary
+fields:
+  origin: String
+  destination: String
+  departAt: DateTime
+  creatorFirstName: String
+  memberCount: int
+  seatsTotal: int
+  womenOnly: bool
+  status: String
